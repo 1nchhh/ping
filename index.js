@@ -1,5 +1,9 @@
 const io = require('socket.io-client')
 const fs = require('fs')
+const a = require('express')()
+
+a.get('/',(b,c)=>c.send('a'))
+a.listen(9373)
 
 if (!fs.existsSync('./repls.json')) fs.writeFileSync('./repls.json', JSON.stringify([], null, 2))
 
