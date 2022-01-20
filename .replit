@@ -1,0 +1,2 @@
+run = "npm i; node ."
+language = "nodejs"
