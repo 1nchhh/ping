@@ -21,11 +21,10 @@ function remove(url) {
 }
 
 const socket = io('wss://ping-hub.1nchh.repl.co', {
-    // infinite reconnection attempts with 10 seconds delay
-    reconnectionAttempts: Infinity,
-    reconnectionDelay: 10000,
-    timeout: 10000,
     reconnection: true,
+    reconnectionDelay: 1000,
+    reconnectionDelayMax : 5000,
+    reconnectionAttempts: Infinity
 })
 
 socket.on('connect', () => {
